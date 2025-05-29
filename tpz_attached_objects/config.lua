@@ -11,6 +11,9 @@ Config.DeleteAllAttached = {
     Description = 'Execute this command to remove all attached props from your player ped.'
 }
 
+-- Clear all player ped attached objects - props if the player has been respawned (not revived).
+Config.DeleteAllOnPlayerRespawn = true
+
 ---------------------------------------------------------------
 --[[ Item Sets ]]--
 ---------------------------------------------------------------
