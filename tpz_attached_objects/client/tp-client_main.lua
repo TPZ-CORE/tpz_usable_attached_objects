@@ -59,7 +59,7 @@ local function OnPlayerPedAttachedPropType(attachedType)
             Citizen.InvokeNative(0xFCCC886EDE3C63EC, player, 2, 1) -- Removes Weapon from animation 
 
             local entitiesList = {}
-					local coords = GetEntityCoords(player) 
+				local coords = GetEntityCoords(player) 
 
             for obj_key, obj_table in pairs (Config.AttachedItemSets[attachedType]) do
 				LoadModel(obj_table.EntityObject)
