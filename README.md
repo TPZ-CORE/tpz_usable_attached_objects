@@ -15,3 +15,8 @@
 ## Description
 
 - The specified scripts allows your players to "wear" attached item sets, such as miner hat, but those item sets should not be very common, the objects are Synced.
+
+## Screenshot Displays
+
+![image](https://github.com/user-attachments/assets/b80afca2-7761-41e9-ba99-01a1bb881aac)
+![image](https://github.com/user-attachments/assets/3bd9436d-0e1b-4a5b-af23-ef5ef0b61409)
