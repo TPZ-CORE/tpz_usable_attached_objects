@@ -7,7 +7,7 @@ local TPZInv = exports.tpz_inventory:getInventoryAPI()
 
 Citizen.CreateThread(function()
 
-	for item, data in pairs (Config.MultiItemSetList) do
+	for item, data in pairs (Config.AttachedItemSets) do
 
 		TPZInv.registerUsableItem(item, "tpz_attached_objects", function(data)
 			local _source = data.source
