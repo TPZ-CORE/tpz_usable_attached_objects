@@ -131,6 +131,7 @@ end)
 
 RegisterNetEvent('tpz_core:onPlayerRespawn')
 AddEventHandler('tpz_core:onPlayerRespawn', function()
+
 	if not Config.DeleteAllOnPlayerRespawn then
 		return
 	end
