@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
 
 	for item, data in pairs (Config.MultiItemSetList) do
 
-		TPZInv.registerUsableItem(k, "tpz_attached_objects", function(data)
+		TPZInv.registerUsableItem(item, "tpz_attached_objects", function(data)
 			local _source = data.source
 
 			TriggerClientEvent("tpz_attached_objects:client:attach", _source, item)
