@@ -104,7 +104,7 @@ ClearAllPlayerPedAttachedProps = function()
 			for i, object in pairs(v.entities) do
 				Wait(100)
 
-				RemoveEntityProperly(object.entity, GetHashKeyobject.model))
+				RemoveEntityProperly(object.entity, GetHashKey(object.model))
 			end
 		
 		end 
