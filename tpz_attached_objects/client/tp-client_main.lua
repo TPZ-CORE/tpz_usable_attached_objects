@@ -33,7 +33,7 @@ local ClearPlayerPedAttachedPropsByType = function(attachedType)
 			for i, object in pairs(v.entities) do
 				Wait(100)
 
-				RemoveEntityProperly(object.entity, object.model)
+				RemoveEntityProperly(object.entity, GetHashKey(object.model))
 			end
 			
 			Wait(1000)
@@ -103,7 +103,7 @@ ClearAllPlayerPedAttachedProps = function()
 		for i, object in pairs(v.entities) do
 			Wait(100)
 
-			RemoveEntityProperly(object.entity, object.model)
+			RemoveEntityProperly(object.entity, GetHashKeyobject.model))
 		end
 		
 	end 
