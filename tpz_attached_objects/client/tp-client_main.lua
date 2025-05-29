@@ -98,20 +98,22 @@ end
 ClearAllPlayerPedAttachedProps = function()
 	local player = PlayerPedId() 
 
-	for k, v in pairs (AttachedProps) do
+	if TPZ.GetTableLength(AttachedProps) > 0 then
+		for k, v in pairs (AttachedProps) do
 
-		for i, object in pairs(v.entities) do
-			Wait(100)
+			for i, object in pairs(v.entities) do
+				Wait(100)
 
-			RemoveEntityProperly(object.entity, GetHashKeyobject.model))
-		end
+				RemoveEntityProperly(object.entity, GetHashKeyobject.model))
+			end
 		
-	end 
+		end 
 
-	ClearPedTasksImmediately(player) 
-	ClearPedSecondaryTask(player) 
+		ClearPedTasksImmediately(player) 
+		ClearPedSecondaryTask(player) 
 
-	AttachedProps = {}
+		AttachedProps = {}
+	end
 end 
 
 ---------------------------------------------------------------
@@ -125,6 +127,15 @@ AddEventHandler('onResourceStop', function(resource)
 
 	ClearAllPlayerPedAttachedProps()
 
+end)
+
+RegisterNetEvent('tpz_core:onPlayerRespawn')
+AddEventHandler('tpz_core:onPlayerRespawn', function()
+	if not Config.DeleteAllOnPlayerRespawn then
+		return
+	end
+
+	ClearAllPlayerPedAttachedProps()
 end)
 
 ---------------------------------------------------------------
